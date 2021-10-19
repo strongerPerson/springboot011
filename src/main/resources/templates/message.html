@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>查看图片</h2>
+<a th:href="@{'http://1.15.3.7:82/'+${message}+'.jpg'}">点击获取图片，查看图片</a>
+<h1>文件上传</h1>
+<form action="/file/upload" method="post" enctype="multipart/form-data">
+    <input type='text'  name='textfield' id='textfield' class='txt' />
+    <input type="file" name="file" class="file" id="fileField"
+           size="28" onchange="document.getElementById('textfield').value=this.value" /></br>
+    <input type="submit"  name="submit" class="btn" value="上传" />
+</form>
+
+<a href="/templates/file.html">上传文件查看</a>
+
+</body>
+</html>

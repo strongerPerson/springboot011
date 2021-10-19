@@ -1,0 +1,28 @@
+ftp:
+  host: 1.15.3.7
+  userName: root
+  password: zyysyn980523TT%%
+  port: 22
+  rootPath: /usr/local/nginx/html/image   #这是nginx文件上传路径
+  img:
+    url: http://1.15.3.7:82/      #这是nginx访问路径和端口
+##文件上传配置
+#  spring:
+#    servlet:
+#       multipart:
+#          enabled:
+#                true
+##文件上传配置
+#spring:
+#   servlet:
+#     multipart:
+#         enabled: true
+#         max-file-size: 30MB           #单个文件最大大小
+#         max-request-size: 100MB            #一次请求文件最大大小
+#  #文件保存路径
+#  #linux下文件的上传路径
+#file:
+#  upload:
+#    path: /usr/local/nginx/html/image/
+#  coming:
+#     path: http://1.15.3.7:82/
