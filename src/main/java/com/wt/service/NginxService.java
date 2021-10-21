@@ -16,11 +16,6 @@ public class NginxService {
 
     public Object uploadPicture(MultipartFile uploadFile,String newName1) {
         FtpUtil ftpUtil=new FtpUtil();
-        System.out.println(newName1+"新名字文件");
-        //1.3生成文件在服务器端存储的子目录
-//        String filePath = new DateTime().toString("/yyyyMMdd/");
-//        System.out.println(filePath+"子目录");
-
         //2、把图片上传到图片服务器
         //2.1获取上传的io流
         InputStream input = null;

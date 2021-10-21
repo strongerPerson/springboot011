@@ -9,7 +9,7 @@ import com.wt.pojo.Image;
  * </p>
  *
  * @author wutian
- * @since 2021-09-07
+ * @since 2021-10-17
  */
 
 public interface ImageMapper extends BaseMapper<Image> {

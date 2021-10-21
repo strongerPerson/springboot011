@@ -26,8 +26,7 @@ public enum  ResultCode {
     NO_RIGTHS(403,"暂无权限操作"),
     @SuppressWarnings("all")
     REPASSWORD_ERROR(9004,"两次密码不一致"),
-    PASSWORD_ERROR(9008,"原密码错误"),
-    PASSWORD_EMPTY(9009,"密码不能为空");
+    PASSWORD_ERROR(9008,"原密码错误");
 
     private int code;
     private String msg;

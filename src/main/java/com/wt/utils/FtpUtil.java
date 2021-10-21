@@ -115,25 +115,12 @@ public class FtpUtil {
         public static String putImages(InputStream inputStream, String imagesName, MultipartFile multipartFile){
             try {
                 ChannelSftp sftp = getChannel();
-                System.out.println(sftp+"连接是否成功");
                 String path = rootPath + "/";
-//                //获取文件上传路径
-//                File file = new File(rootPath);
-//                //判断不存在该目录就创建
-//                if (!file.exists()){
-//                    file.mkdirs();
-//                }
-//                //开始上传
-//                multipartFile.transferTo(new File(file,imagesName));
-//                System.out.println(path+"这是工具类里面");
                 createDir(path,sftp);
-
                 //上传文件
                 sftp.put(inputStream, path + imagesName);
-               // logger.info("上传成功！");
                 sftp.quit();
                 sftp.exit();
-
                 //处理返回的路径
                 String resultFile;
                 resultFile = imgUrl + imagesName;
@@ -141,7 +128,7 @@ public class FtpUtil {
                 return resultFile;
 
             } catch (Exception e) {
-               // logger.error("上传失败：" + e.getMessage());
+                System.out.println("上传失败");
             }
             return "";
         }

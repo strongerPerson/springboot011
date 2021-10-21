@@ -56,13 +56,4 @@ public class ResultCommon {
     public void setData(Object data) {
         this.data = data;
     }
-
-    @Override
-    public String toString() {
-        return "返回值JSON{" +
-                "code=" + code +
-                ", msg='" + msg + '\'' +
-                ", data=" + data +
-                '}';
-    }
 }
